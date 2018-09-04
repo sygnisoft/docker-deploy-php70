@@ -12,6 +12,6 @@ RUN composer global require phing/phing
 RUN composer global require phpstan/phpstan
 RUN echo "export PATH=~/.composer/vendor/bin:$PATH" > /root/.bashrc
 RUN echo "memory_limit=-1" > /usr/local/etc/php/conf.d/docker-php-memorylimit.ini
-RUN pip install --upgrade setuptools && pip install --upgrade awsebcli
+RUN pip install --upgrade setuptools && pip install --upgrade "urllib3==1.22" awscli
 
 WORKDIR /app
